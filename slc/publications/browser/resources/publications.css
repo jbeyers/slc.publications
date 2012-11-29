@@ -190,6 +190,34 @@ ul.linkList a {
     margin: 0;
 }
 
+.help-overlay {
+    width: 625px;
+    height: 70%;
+    min-height: 200px;
+    background-color: #fff;
+    display: none;
+    z-index: 10000;
+    border: 1px solid #999999;
+    box-shadow: 0 0 2em 0.5em #666666;
+}
+.help-overlay dl{
+    height: 80%;
+    background-color: #fff;
+    padding: 2em;
+    overflow-y: scroll;
+}
+
+.help-overlay .close {
+    background-image: url("overlayClose.png");
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+
 
 /* @end */
 

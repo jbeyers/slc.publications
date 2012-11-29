@@ -93,28 +93,18 @@
             queryPublications();
         });
 
-        // show tooltips
-        $('a.tooltip').each(function(){
-            var helptext = $($(this).attr('rel'));
-
-            $(this).qtip({
-                content: { text: helptext },
-                position: {
-                    corner: {
-                        target: 'leftMiddle',
-                        tooltip: 'rightMiddle'
-                    }
-                },
-                show: { when: { event: 'click' } },
-                hide: { when: { event: 'unfocus' } },
-                style: {
-                    tip: { corner: 'rightMiddle' },
-                    width: 625
-                }
-            });
-
-        })
-
+        $('a.tooltip').overlay({
+            mask: {
+                color: '#fff',
+                loadSpeed: 200,
+                opacity: 0.5
+            },
+            // needed to make z-index work for .help-overlay
+            onLoad:  function() {
+                this.getOverlay().insertAfter('#exposeMask');
+            }
+        });
+        
         // Don't warn the user that they have already submitted the form
         $("#queryPublications").unbind('click');
 
