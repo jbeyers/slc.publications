@@ -3,6 +3,10 @@ from zope.interface import Interface, alsoProvides
 from zope.app.content import interfaces as contentifaces
 from Products.ATContentTypes.interfaces import IATFile
 
+class IAddOnInstalled(Interface):
+    """A layer specific for this add-on product.
+    """
+
 class IAnyPublicationCapable(Interface):
     """Any aspect of publication/content capable.
     """

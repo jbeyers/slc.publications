@@ -9,6 +9,7 @@
 
     <!-- Need to override several templates -->
     <browser:jbot
+        layer="slc.publications.interfaces.IAddOnInstalled"
         directory="jbot"
         />
 

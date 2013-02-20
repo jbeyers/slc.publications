@@ -1,0 +1,7 @@
+<layers>
+ <layer
+     name="slc.publications"
+     interface="slc.publications.interfaces.IAddOnInstalled"
+     />
+</layers>
+
